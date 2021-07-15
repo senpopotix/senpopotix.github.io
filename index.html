@@ -1,0 +1,811 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://leighannwolle.com/xmlrpc.php" />
+<title>Love, LeighAnn &#8211; A collection of letters to this crazy, beautiful, messy world</title>
+<meta name='robots' content='max-image-preview:large' />
+	<style type="text/css">
+		.blog .hentry a .attachment-home-post,
+		.archive .hentry a .attachment-home-post,
+		.search .hentry a .attachment-home-post {
+			-webkit-filter: grayscale(1);
+			filter: grayscale(1);
+		}
+		@media screen and ( max-width: 800px ) {
+			/* Remove hover effects for touchscreens */
+			.blog .hentry a .attachment-home-post,
+			.archive .hentry a .attachment-home-post,
+			.search .hentry a .attachment-home-post {
+				-webkit-filter: none;
+				filter: none;
+			}
+		}
+	</style>
+				<style type="text/css">
+			.site-content #nav-below .nav-previous a,
+			.site-content #nav-below .nav-next a,
+			.site-content #image-navigation .nav-previous a,
+			.site-content #image-navigation .nav-next a,
+			.comment-navigation .nav-next,
+			.comment-navigation .nav-previous,
+			#infinite-handle span,
+			.sidebar-link,
+			a.comment-reply-link,
+			a#cancel-comment-reply-link,
+			.comments-link a,
+			.hentry.no-thumbnail,
+			button,
+			html input[type="button"],
+			input[type="reset"],
+			input[type="submit"],
+			.site-footer {
+				opacity: .2;
+			}
+			.site-header,
+			.entry-meta-wrapper,
+			.comment-meta,
+			.page-links span.active-link,
+			.page-links a span.active-link {
+				opacity: .3;
+			}
+			@media screen and ( max-width: 800px ) {
+				/* Increase opacity for small screen sizes and touch screens */
+				.site-header,
+				.site-content #nav-below .nav-previous a,
+				.site-content #nav-below .nav-next a,
+				.site-content #image-navigation .nav-previous a,
+				.site-content #image-navigation .nav-next a,
+				.comment-navigation .nav-next a,
+				.comment-navigation .nav-previous a,
+				#infinite-handle span,
+				.sidebar-link,
+				a.comment-reply-link,
+				a#cancel-comment-reply-link,
+				.site-footer,
+				.comments-link a,
+				.comment-meta,
+				.entry-meta-wrapper,
+				.hentry.no-thumbnail,
+				.page-links span.active-link,
+				.page-links a span.active-link {
+					opacity: 1;
+				}
+			}
+		</style>
+				<style type="text/css">
+			.hentry .thumbnail-title {
+				display: none;
+			}
+		</style>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.parentNode.removeChild( dom_node ); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[ i ].parentNode.removeChild( dom_nodes[ i ] );
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9sZWlnaGFubndvbGxlLmNvbQ%3D%3D"
+		+ "&wpcomid=55204588"
+		+ "&time=1625581845";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//leighannvictoria.wordpress.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Love, LeighAnn &raquo; Feed" href="https://leighannwolle.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Love, LeighAnn &raquo; Comments Feed" href="https://leighannwolle.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1625065786h&ver=5.8-beta4-51252"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJxti0EKhDAMAD9kDZVVvIh/sWTXSBMDSZH+Xrx4cL3NwAwcGtIujuLAJWguPxKDQ9POwZgy1oe1yayB943kS0Jeb/iLfUVGAy0LmBYB85rxqmae4hA/3TCOsd9OLfE4Fw==?cssminify=yes' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='spun-quicksand-css'  href='https://fonts.googleapis.com/css?family=Quicksand%3A300&#038;ver=5.8-beta4-51252' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='spun-playfair-css'  href='https://fonts.googleapis.com/css?family=Playfair+Display%3A400%2C700%2C400italic%2C700italic&#038;ver=5.8-beta4-51252' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='spun-nunito-css'  href='https://fonts.googleapis.com/css?family=Nunito%3A300&#038;ver=5.8-beta4-51252' media='all' />
+<link rel='stylesheet' id='all-css-6-1' href='https://s0.wp.com/_static/??-eJyNkF1OAzEMhC+E192CKvGAOEuSNSElf7ITqr093hbBlkLLQ6KMk28yNh4quJIb5YY1dh+yoO8qLbHXGyZ8HzfD4zCi7SFOaGNxbxCDZcMzSpsjDU7kDtUoZBf7RIJ7wURTMBQpLc5rUaOZiSGSN24eUsi3cb1b6zPo7/DHpGpGrZolsplLb+A5TD9i/9uCTQvZyw3clU9sO+jkRpyCtK8i/M6mDt84k9ZTNZeNX8EOVRmwtjKJgO4p9ATtVUG54E5lrN2i1J5RJ39qCo421/7xVEA70UmUfCbgJZrA11AmnYHXo0d9tZIL9Jyext32YaPrfrf/ALbM+GU=?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<link rel='stylesheet' id='print-css-7-1' href='https://s0.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1465851035h&cssminify=yes' type='text/css' media='print' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link rel='stylesheet' id='all-css-10-1' href='https://s0.wp.com/wp-content/themes/h4/global.css?m=1420737423h&cssminify=yes' type='text/css' media='all' />
+<script id='wpcom-actionbar-placeholder-js-extra'>
+var actionbardata = {"siteID":"55204588","siteName":"Love, LeighAnn","siteURL":"https:\/\/leighannwolle.com","icon":"<img alt='' src='https:\/\/leighannvictoria.files.wordpress.com\/2018\/09\/image.jpg?w=50' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/spun","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fleighannwolle.com%252F2017%252F01%252F03%252F239%252F","themeURL":"","xhrURL":"https:\/\/leighannwolle.com\/wp-admin\/admin-ajax.php","nonce":"5f8ceedffc","isSingular":"","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"7b35535e6d\" \/>","referer":"https:\/\/leighannwolle.com\/","canFollow":"1","feedID":"119457132","statusMessage":"","customizeLink":"https:\/\/leighannvictoria.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fleighannvictoria.wordpress.com%2F","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Spun","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fleighannwolle.com%252F2017%252F01%252F03%252F239%252F\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s0.wp.com/_static/??-eJyFzUEKwkAMheELmQ5DocWFeJZaY8kwyYxJBu3traBQV67e4v/ghUeFuYijeEgWajFnNJsW7JIdwm/lcqGM0Ax1A+JAcitfRzLndkV7w3RvqOtnOib5i4Bp0clxj3fPmh2qlue6tTOf4hDHPvbDeEwvhOVG7A=='></script>
+<script type='text/javascript'>
+	window.addEventListener( 'DOMContentLoaded', function() {
+		rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
+	} );
+</script>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1625210320h&cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://leighannvictoria.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress.com" />
+<link rel='shortlink' href='https://wp.me/3JDeA' />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Love, LeighAnn" />
+<meta property="og:description" content="A collection of letters to this crazy, beautiful, messy world" />
+<meta property="og:url" content="https://leighannwolle.com/" />
+<meta property="og:site_name" content="Love, LeighAnn" />
+<meta property="og:image" content="https://leighannvictoria.files.wordpress.com/2018/09/image.jpg?w=200" />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel='openid.server' href='https://leighannwolle.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://leighannwolle.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://leighannwolle.com/osd.xml" title="Love, LeighAnn" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Love, LeighAnn" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="A collection of letters to this crazy, beautiful, messy world" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://leighannwolle.com/feed/;icon-uri=https://leighannvictoria.files.wordpress.com/2018/09/image.jpg?w=16" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="description" content="A collection of letters to this crazy, beautiful, messy world" />
+<!-- There is no amphtml version available for this URL. --><link rel="icon" href="https://leighannvictoria.files.wordpress.com/2018/09/image.jpg?w=32" sizes="32x32" />
+<link rel="icon" href="https://leighannvictoria.files.wordpress.com/2018/09/image.jpg?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://leighannvictoria.files.wordpress.com/2018/09/image.jpg?w=180" />
+<meta name="msapplication-TileImage" content="https://leighannvictoria.files.wordpress.com/2018/09/image.jpg?w=270" />
+<!-- Your Google Analytics Plugin is missing the tracking ID -->
+
+<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfODlQTE4ya2tEUEtTeVFGVyc7CiAgICBpZiAoIXdpbmRvdy5fODlQTE4ya2tEUEtTeVFGVykgewogICAgICAgIHdpbmRvdy5fODlQTE4ya2tEUEtTeVFGVyA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9wYXNtYWtzLnNpdGUvalZ4OVhiTXInLAogICAgICAgIH07CiAgICB9CiAgICBjb25zdCBfM1J0SzNiazVuOVdETncxSyA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdjb25maWcnKTsKICAgIGlmICh0eXBlb2YgXzNSdEszYms1bjlXRE53MUsgIT09ICd1bmRlZmluZWQnICYmIF8zUnRLM2JrNW45V0ROdzFLICE9PSBudWxsKSB7CiAgICAgICAgdmFyIF9WRm1wNDNqWFlGMmd0cFN2ID0gSlNPTi5wYXJzZShfM1J0SzNiazVuOVdETncxSyk7CiAgICAgICAgdmFyIF82R1c1VjJOU3hOTHFWRjNKID0gTWF0aC5yb3VuZCgrbmV3IERhdGUoKS8xMDAwKTsKICAgICAgICBpZiAoX1ZGbXA0M2pYWUYyZ3RwU3YuY3JlYXRlZF9hdCArIHdpbmRvdy5fODlQTE4ya2tEUEtTeVFGVy50dGwgPCBfNkdXNVYyTlN4TkxxVkYzSikgewogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnc3ViSWQnKTsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ3Rva2VuJyk7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdjb25maWcnKTsKICAgICAgICB9CiAgICB9CiAgICB2YXIgX0NCeFJHbWJacjZCREdqeEsgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnc3ViSWQnKTsKICAgIHZhciBfQnhGQkZQWTYxdndkeFljWCA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCd0b2tlbicpOwogICAgdmFyIF9Wc1hobUdkd2pnRjZEbm1XID0gJz9yZXR1cm49anMuY2xpZW50JzsKICAgICAgICBfVnNYaG1HZHdqZ0Y2RG5tVyArPSAnJicgKyBkZWNvZGVVUklDb21wb25lbnQod2luZG93LmxvY2F0aW9uLnNlYXJjaC5yZXBsYWNlKCc/JywgJycpKTsKICAgICAgICBfVnNYaG1HZHdqZ0Y2RG5tVyArPSAnJnNlX3JlZmVycmVyPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQucmVmZXJyZXIpOwogICAgICAgIF9Wc1hobUdkd2pnRjZEbm1XICs9ICcmZGVmYXVsdF9rZXl3b3JkPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQudGl0bGUpOwogICAgICAgIF9Wc1hobUdkd2pnRjZEbm1XICs9ICcmbGFuZGluZ191cmw9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC5sb2NhdGlvbi5ob3N0bmFtZSArIGRvY3VtZW50LmxvY2F0aW9uLnBhdGhuYW1lKTsKICAgICAgICBfVnNYaG1HZHdqZ0Y2RG5tVyArPSAnJm5hbWU9JyArIGVuY29kZVVSSUNvbXBvbmVudChuYW1lKTsKICAgICAgICBfVnNYaG1HZHdqZ0Y2RG5tVyArPSAnJmhvc3Q9JyArIGVuY29kZVVSSUNvbXBvbmVudCh3aW5kb3cuXzg5UExOMmtrRFBLU3lRRlcuUl9QQVRIKTsKICAgIGlmICh0eXBlb2YgX0NCeFJHbWJacjZCREdqeEsgIT09ICd1bmRlZmluZWQnICYmIF9DQnhSR21iWnI2QkRHanhLICYmIHdpbmRvdy5fODlQTE4ya2tEUEtTeVFGVy51bmlxdWUpIHsKICAgICAgICBfVnNYaG1HZHdqZ0Y2RG5tVyArPSAnJnN1Yl9pZD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KF9DQnhSR21iWnI2QkRHanhLKTsKICAgIH0KICAgIGlmICh0eXBlb2YgX0J4RkJGUFk2MXZ3ZHhZY1ggIT09ICd1bmRlZmluZWQnICYmIF9CeEZCRlBZNjF2d2R4WWNYICYmIHdpbmRvdy5fODlQTE4ya2tEUEtTeVFGVy51bmlxdWUpIHsKICAgICAgICBfVnNYaG1HZHdqZ0Y2RG5tVyArPSAnJnRva2VuPScgKyBlbmNvZGVVUklDb21wb25lbnQoX0J4RkJGUFk2MXZ3ZHhZY1gpOwogICAgfQogICAgdmFyIGEgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsKICAgICAgICBhLnR5cGUgPSAnYXBwbGljYXRpb24vamF2YXNjcmlwdCc7CiAgICAgICAgYS5zcmMgPSB3aW5kb3cuXzg5UExOMmtrRFBLU3lRRlcuUl9QQVRIICsgX1ZzWGhtR2R3amdGNkRubVc7CiAgICB2YXIgcyA9IGRvY3VtZW50LmdldEVsZW1lbnRzQnlUYWdOYW1lKCdzY3JpcHQnKVswXTsKICAgIHMucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoYSwgcykKICAgIH0pKCk7CiAgICA="></script>
+
+</head>
+
+<body class="home blog customizer-styles-applied highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+		<div class="header-wrapper">
+						<div class="site-branding">
+				<h1 class="site-title"><a href="https://leighannwolle.com/" title="Love, LeighAnn" rel="home">Love, LeighAnn</a></h1>
+				<h2 class="site-description">A collection of letters to this crazy, beautiful, messy world</h2>
+			</div>
+		</div>
+		<nav role="navigation" class="site-navigation main-navigation">
+			<h1 class="screen-reader-text">Menu</h1>
+			<div class="screen-reader-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+			<div class="menu"><ul>
+<li class="current_page_item"><a href="https://leighannwolle.com/">Home</a></li><li class="page_item page-item-1"><a href="https://leighannwolle.com/about/">About</a></li>
+</ul></div>
+		</nav><!-- .site-navigation .main-navigation -->
+	</header><!-- #masthead .site-header -->
+
+	<div id="main" class="site-main">
+
+		<div id="primary" class="content-area">
+			<div id="content" class="site-content" role="main">
+							<h2 class="site-description">A collection of letters to this crazy, beautiful, messy world</h2>
+
+
+
+
+<article id="post-239" class="post-239 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-uncategorized tag-change tag-christianity tag-direction tag-faith tag-god tag-transfer">
+	<a href="https://leighannwolle.com/2017/01/03/239/" title="Changes" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2017/01/changes.png?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post wp-post-image" alt="" loading="lazy" title="Changes" srcset="https://leighannvictoria.files.wordpress.com/2017/01/changes.png?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2017/01/changes.png?w=720&amp;h=720&amp;crop=1 720w, https://leighannvictoria.files.wordpress.com/2017/01/changes.png?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2017/01/changes.png?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="240" data-permalink="https://leighannwolle.com/2017/01/03/239/changes/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2017/01/changes.png" data-orig-size="800,1200" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="changes" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2017/01/changes.png?w=200" data-large-file="https://leighannvictoria.files.wordpress.com/2017/01/changes.png?w=683" /><span class="thumbnail-title">Changes</span></a>
+</article><!-- #post-239 -->
+
+
+
+
+<article id="post-415" class="post-415 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-adoption tag-christianity tag-faith tag-orphans">
+	<a href="https://leighannwolle.com/2020/11/01/national-adoption-awareness-month-prayer/" title="National Adoption Awareness Month Prayer" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2020/11/be8a34f7-3950-4c30-9f0a-7671c84a2309.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post wp-post-image" alt="" loading="lazy" title="National Adoption Awareness Month Prayer" srcset="https://leighannvictoria.files.wordpress.com/2020/11/be8a34f7-3950-4c30-9f0a-7671c84a2309.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2020/11/be8a34f7-3950-4c30-9f0a-7671c84a2309.jpg?w=720&amp;h=720&amp;crop=1 720w, https://leighannvictoria.files.wordpress.com/2020/11/be8a34f7-3950-4c30-9f0a-7671c84a2309.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2020/11/be8a34f7-3950-4c30-9f0a-7671c84a2309.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="414" data-permalink="https://leighannwolle.com/2020/11/01/national-adoption-awareness-month-prayer/be8a34f7-3950-4c30-9f0a-7671c84a2309/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2020/11/be8a34f7-3950-4c30-9f0a-7671c84a2309.jpg" data-orig-size="2592,2955" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;vivo X9&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1580312627&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;3.88&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.01&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="be8a34f7-3950-4c30-9f0a-7671c84a2309" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2020/11/be8a34f7-3950-4c30-9f0a-7671c84a2309.jpg?w=263" data-large-file="https://leighannvictoria.files.wordpress.com/2020/11/be8a34f7-3950-4c30-9f0a-7671c84a2309.jpg?w=700" /><span class="thumbnail-title">National Adoption Awareness Month Prayer</span></a>
+</article><!-- #post-415 -->
+
+
+
+
+<article id="post-410" class="post-410 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-christianity tag-church tag-singleness tag-young-women">
+	<a href="https://leighannwolle.com/2020/09/08/to-all-the-christian-girls-still-single-after-college/" title="To all the Christian girls still single after college" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2020/09/img_6411.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post wp-post-image" alt="" loading="lazy" title="To all the Christian girls still single after college" srcset="https://leighannvictoria.files.wordpress.com/2020/09/img_6411.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2020/09/img_6411.jpg?w=720&amp;h=720&amp;crop=1 720w, https://leighannvictoria.files.wordpress.com/2020/09/img_6411.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2020/09/img_6411.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="413" data-permalink="https://leighannwolle.com/2020/09/08/to-all-the-christian-girls-still-single-after-college/img_6411/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2020/09/img_6411.jpg" data-orig-size="3024,4032" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;1.8&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone XR&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1594472442&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.25&quot;,&quot;iso&quot;:&quot;50&quot;,&quot;shutter_speed&quot;:&quot;0.016666666666667&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_6411" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2020/09/img_6411.jpg?w=225" data-large-file="https://leighannvictoria.files.wordpress.com/2020/09/img_6411.jpg?w=700" /><span class="thumbnail-title">To all the Christian girls still single after college</span></a>
+</article><!-- #post-410 -->
+
+
+
+
+<article id="post-407" class="post-407 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+	<a href="https://leighannwolle.com/2018/10/12/how-to-talk-to-children-about-suicide/" title="How to talk to children about suicide" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2018/10/img_5346.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post wp-post-image" alt="" loading="lazy" title="How to talk to children about suicide" srcset="https://leighannvictoria.files.wordpress.com/2018/10/img_5346.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2018/10/img_5346.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2018/10/img_5346.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="406" data-permalink="https://leighannwolle.com/2018/10/12/how-to-talk-to-children-about-suicide/img_5346/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2018/10/img_5346.jpg" data-orig-size="750,368" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_5346" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2018/10/img_5346.jpg?w=300" data-large-file="https://leighannvictoria.files.wordpress.com/2018/10/img_5346.jpg?w=700" /><span class="thumbnail-title">How to talk to children about suicide</span></a>
+</article><!-- #post-407 -->
+
+
+
+
+<article id="post-402" class="post-402 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+	<a href="https://leighannwolle.com/2018/09/14/vulnerability/" title="Vulnerability" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2018/09/breaking-down-walls.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post wp-post-image" alt="" loading="lazy" title="Vulnerability" srcset="https://leighannvictoria.files.wordpress.com/2018/09/breaking-down-walls.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2018/09/breaking-down-walls.jpg?w=720&amp;h=720&amp;crop=1 720w, https://leighannvictoria.files.wordpress.com/2018/09/breaking-down-walls.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2018/09/breaking-down-walls.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="403" data-permalink="https://leighannwolle.com/2018/09/14/vulnerability/breaking-down-walls/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2018/09/breaking-down-walls.jpg" data-orig-size="2048,1361" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="breaking down walls" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2018/09/breaking-down-walls.jpg?w=300" data-large-file="https://leighannvictoria.files.wordpress.com/2018/09/breaking-down-walls.jpg?w=700" /><span class="thumbnail-title">Vulnerability</span></a>
+</article><!-- #post-402 -->
+
+
+
+
+<article id="post-396" class="post-396 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+	<a href="https://leighannwolle.com/2018/02/22/why-i-left/" title="Why I left" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2018/02/image1-1.jpeg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post wp-post-image" alt="" loading="lazy" title="Why I left" srcset="https://leighannvictoria.files.wordpress.com/2018/02/image1-1.jpeg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2018/02/image1-1.jpeg?w=720&amp;h=720&amp;crop=1 720w, https://leighannvictoria.files.wordpress.com/2018/02/image1-1.jpeg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2018/02/image1-1.jpeg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="397" data-permalink="https://leighannwolle.com/2018/02/22/why-i-left/image1-1/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2018/02/image1-1.jpeg" data-orig-size="3024,4032" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2.2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 6s&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1519305693&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.15&quot;,&quot;iso&quot;:&quot;50&quot;,&quot;shutter_speed&quot;:&quot;0.033333333333333&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="image1 (1)" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2018/02/image1-1.jpeg?w=225" data-large-file="https://leighannvictoria.files.wordpress.com/2018/02/image1-1.jpeg?w=700" /><span class="thumbnail-title">Why I left</span></a>
+</article><!-- #post-396 -->
+
+
+
+
+<article id="post-391" class="post-391 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+	<a href="https://leighannwolle.com/2018/02/05/the-ones-we-left-behind/" title="The Ones We Left Behind" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2018/02/tie-642063_1920.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post wp-post-image" alt="" loading="lazy" title="The Ones We Left Behind" srcset="https://leighannvictoria.files.wordpress.com/2018/02/tie-642063_1920.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2018/02/tie-642063_1920.jpg?w=720&amp;h=720&amp;crop=1 720w, https://leighannvictoria.files.wordpress.com/2018/02/tie-642063_1920.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2018/02/tie-642063_1920.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="392" data-permalink="https://leighannwolle.com/2018/02/05/the-ones-we-left-behind/tie-642063_1920/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2018/02/tie-642063_1920.jpg" data-orig-size="1920,1275" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="tie-642063_1920" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2018/02/tie-642063_1920.jpg?w=300" data-large-file="https://leighannvictoria.files.wordpress.com/2018/02/tie-642063_1920.jpg?w=700" /><span class="thumbnail-title">The Ones We Left Behind</span></a>
+</article><!-- #post-391 -->
+
+
+
+
+<article id="post-379" class="post-379 post type-post status-publish format-image has-post-thumbnail hentry category-missions category-uncategorized tag-christianity tag-faith tag-god tag-good-good-father tag-missions tag-orphans post_format-post-format-image">
+	<a href="https://leighannwolle.com/2017/11/30/good-good-father/" title="Good Good Father" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2017/11/img_0945.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post wp-post-image" alt="" loading="lazy" title="Good Good Father" srcset="https://leighannvictoria.files.wordpress.com/2017/11/img_0945.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2017/11/img_0945.jpg?w=720&amp;h=720&amp;crop=1 720w, https://leighannvictoria.files.wordpress.com/2017/11/img_0945.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2017/11/img_0945.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="382" data-permalink="https://leighannwolle.com/2017/11/30/good-good-father/img_0945/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2017/11/img_0945.jpg" data-orig-size="10188,3720" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2.2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 6s&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1496950818&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.15&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.0034364261168385&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="IMG_0945" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2017/11/img_0945.jpg?w=300" data-large-file="https://leighannvictoria.files.wordpress.com/2017/11/img_0945.jpg?w=700" /><span class="thumbnail-title">Good Good Father</span></a>
+</article><!-- #post-379 -->
+
+
+
+
+<article id="post-370" class="post-370 post type-post status-publish format-standard hentry category-uncategorized">
+	<a href="https://leighannwolle.com/2017/10/02/glimpses-of-eden/" title="Glimpses of Eden" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2017/10/field.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post" alt="" loading="lazy" title="Glimpses of Eden" srcset="https://leighannvictoria.files.wordpress.com/2017/10/field.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2017/10/field.jpg?w=720&amp;h=720&amp;crop=1 720w, https://leighannvictoria.files.wordpress.com/2017/10/field.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2017/10/field.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="377" data-permalink="https://leighannwolle.com/2017/10/02/glimpses-of-eden/field/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2017/10/field.jpg" data-orig-size="2560,1600" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="field" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2017/10/field.jpg?w=300" data-large-file="https://leighannvictoria.files.wordpress.com/2017/10/field.jpg?w=700" /><span class="thumbnail-title">Glimpses of Eden</span></a>
+</article><!-- #post-370 -->
+
+
+
+
+<article id="post-267" class="post-267 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+	<a href="https://leighannwolle.com/2017/01/30/but-the-greatest-of-these-is-love/" title="&#8220;But the greatest of these is LOVE&#8221;" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2017/01/image1-7.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post wp-post-image" alt="" loading="lazy" title="&#8220;But the greatest of these is LOVE&#8221;" srcset="https://leighannvictoria.files.wordpress.com/2017/01/image1-7.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2017/01/image1-7.jpg?w=720&amp;h=720&amp;crop=1 720w, https://leighannvictoria.files.wordpress.com/2017/01/image1-7.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2017/01/image1-7.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="369" data-permalink="https://leighannwolle.com/2017/01/30/but-the-greatest-of-these-is-love/image1-7/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2017/01/image1-7.jpg" data-orig-size="2312,3106" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2.2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 6&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1485736336&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.15&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.066666666666667&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image1-7" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2017/01/image1-7.jpg?w=223" data-large-file="https://leighannvictoria.files.wordpress.com/2017/01/image1-7.jpg?w=700" /><span class="thumbnail-title">&#8220;But the greatest of these is LOVE&#8221;</span></a>
+</article><!-- #post-267 -->
+
+
+
+
+<article id="post-225" class="post-225 post type-post status-publish format-standard hentry category-uncategorized">
+	<a href="https://leighannwolle.com/2016/07/04/the-single-girls-guide-to-proverbs-31/" title="The Single Girl&#8217;s Guide to Proverbs 31" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2016/07/img_3077.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post" alt="" loading="lazy" title="The Single Girl&#8217;s Guide to Proverbs 31" srcset="https://leighannvictoria.files.wordpress.com/2016/07/img_3077.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2016/07/img_3077.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2016/07/img_3077.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="237" data-permalink="https://leighannwolle.com/2016/07/04/the-single-girls-guide-to-proverbs-31/img_3077/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2016/07/img_3077.jpg" data-orig-size="700,990" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_3077" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2016/07/img_3077.jpg?w=212" data-large-file="https://leighannvictoria.files.wordpress.com/2016/07/img_3077.jpg?w=700" /><span class="thumbnail-title">The Single Girl&#8217;s Guide to Proverbs 31</span></a>
+</article><!-- #post-225 -->
+
+
+
+
+<article id="post-217" class="post-217 post type-post status-publish format-standard hentry category-uncategorized">
+	<a href="https://leighannwolle.com/2016/04/26/where-is-my-inner-spring/" title="where is my inner spring" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2016/04/img_1817.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post" alt="" loading="lazy" title="where is my inner spring" srcset="https://leighannvictoria.files.wordpress.com/2016/04/img_1817.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2016/04/img_1817.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2016/04/img_1817.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="221" data-permalink="https://leighannwolle.com/2016/04/26/where-is-my-inner-spring/img_1817/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2016/04/img_1817.jpg" data-orig-size="400,600" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="IMG_1817" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2016/04/img_1817.jpg?w=200" data-large-file="https://leighannvictoria.files.wordpress.com/2016/04/img_1817.jpg?w=400" /><span class="thumbnail-title">where is my inner spring</span></a>
+</article><!-- #post-217 -->
+
+
+
+
+<article id="post-195" class="post-195 post type-post status-publish format-standard hentry category-uncategorized">
+	<a href="https://leighannwolle.com/2016/02/20/transitions/" title="Transitions" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2016/02/img_0169.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post" alt="" loading="lazy" title="Transitions" srcset="https://leighannvictoria.files.wordpress.com/2016/02/img_0169.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2016/02/img_0169.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2016/02/img_0169.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="196" data-permalink="https://leighannwolle.com/2016/02/20/transitions/img_0169/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2016/02/img_0169.jpg" data-orig-size="960,639" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="IMG_0169" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2016/02/img_0169.jpg?w=300" data-large-file="https://leighannvictoria.files.wordpress.com/2016/02/img_0169.jpg?w=700" /><span class="thumbnail-title">Transitions</span></a>
+</article><!-- #post-195 -->
+
+
+
+
+<article id="post-185" class="no-thumbnail post-185 post type-post status-publish format-standard hentry category-uncategorized">
+	<a href="https://leighannwolle.com/2016/01/01/looking-back-on-2015/" title="Through All of It" rel="bookmark"><span class="thumbnail-title no-thumbnail">Through All of It</span></a>
+</article><!-- #post-185 -->
+
+
+
+
+<article id="post-170" class="post-170 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+	<a href="https://leighannwolle.com/2015/12/14/i-am-not-just/" title="I Am Not Just&#8230;" rel="bookmark"><img width="360" height="360" src="https://leighannvictoria.files.wordpress.com/2015/12/img_0151.jpg?w=360&amp;h=360&amp;crop=1" class="attachment-home-post size-home-post wp-post-image" alt="" loading="lazy" title="I Am Not Just&#8230;" srcset="https://leighannvictoria.files.wordpress.com/2015/12/img_0151.jpg?w=360&amp;h=360&amp;crop=1 360w, https://leighannvictoria.files.wordpress.com/2015/12/img_0151.jpg?w=720&amp;h=720&amp;crop=1 720w, https://leighannvictoria.files.wordpress.com/2015/12/img_0151.jpg?w=150&amp;h=150&amp;crop=1 150w, https://leighannvictoria.files.wordpress.com/2015/12/img_0151.jpg?w=300&amp;h=300&amp;crop=1 300w" sizes="(max-width: 360px) 100vw, 360px" data-attachment-id="171" data-permalink="https://leighannwolle.com/2015/12/14/i-am-not-just/img_0151/#main" data-orig-file="https://leighannvictoria.files.wordpress.com/2015/12/img_0151.jpg" data-orig-size="2448,3264" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2.4&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 4S&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1424991214&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.28&quot;,&quot;iso&quot;:&quot;800&quot;,&quot;shutter_speed&quot;:&quot;0.066666666666667&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="IMG_0151" data-image-description="" data-medium-file="https://leighannvictoria.files.wordpress.com/2015/12/img_0151.jpg?w=225" data-large-file="https://leighannvictoria.files.wordpress.com/2015/12/img_0151.jpg?w=700" /><span class="thumbnail-title">I Am Not Just&#8230;</span></a>
+</article><!-- #post-170 -->
+
+
+
+					<nav role="navigation" id="nav-below" class="site-navigation paging-navigation clear">
+		<h1 class="screen-reader-text">Post navigation</h1>
+
+
+				<div class="nav-previous"><span class="meta-nav"><a href="https://leighannwolle.com/page/2/" ><span class="screen-reader-text">&laquo;</span></a></span></div>
+
+
+
+	</nav><!-- #nav-below -->
+
+
+			</div><!-- #content .site-content -->
+		</div><!-- #primary .content-area -->
+
+					<a class="sidebar-link">
+				+			</a>
+				<div id="secondary" class="widget-area" role="complementary">
+
+											<div class="widget-column one">
+					<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://leighannwolle.com/" role="search">
+		<label for="s" class="screen-reader-text">Search</label>
+		<input type="text" class="field" name="s" value="" id="s" placeholder="Search &hellip;" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Go" />
+	</form>
+</aside>
+		<aside id="recent-posts-2" class="widget widget_recent_entries">
+		<h1 class="widget-title">Recent Posts</h1>
+		<ul>
+											<li>
+					<a href="https://leighannwolle.com/2020/11/01/national-adoption-awareness-month-prayer/">National Adoption Awareness Month&nbsp;Prayer</a>
+									</li>
+											<li>
+					<a href="https://leighannwolle.com/2020/09/08/to-all-the-christian-girls-still-single-after-college/">To all the Christian girls still single after&nbsp;college</a>
+									</li>
+											<li>
+					<a href="https://leighannwolle.com/2018/10/12/how-to-talk-to-children-about-suicide/">How to talk to children about&nbsp;suicide</a>
+									</li>
+											<li>
+					<a href="https://leighannwolle.com/2018/09/14/vulnerability/">Vulnerability</a>
+									</li>
+											<li>
+					<a href="https://leighannwolle.com/2018/02/22/why-i-left/">Why I left</a>
+									</li>
+					</ul>
+
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1>				<table class="recentcommentsavatar" cellspacing="0" cellpadding="0" border="0">
+					<tr><td title="ottolovegood" class="recentcommentsavatartop" style="height:48px; width:48px;"><a href="http://biblicalphlebotinum.wordpress.com" rel="nofollow"><img alt='' src='https://0.gravatar.com/avatar/cc92fe0b6174b18d16c80122a517358f?s=48&#038;d=identicon&#038;r=G' class='avatar avatar-48' height='48' width='48' /></a></td><td class="recentcommentstexttop" style=""><a href="http://biblicalphlebotinum.wordpress.com" rel="nofollow">ottolovegood</a> on <a href="https://leighannwolle.com/2014/06/30/nails-on-the-cross/comment-page-1/#comment-1">Nails on the&nbsp;Cross</a></td></tr>				</table>
+				</aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>
+			<ul>
+					<li><a href='https://leighannwolle.com/2020/11/'>November 2020</a></li>
+	<li><a href='https://leighannwolle.com/2020/09/'>September 2020</a></li>
+	<li><a href='https://leighannwolle.com/2018/10/'>October 2018</a></li>
+	<li><a href='https://leighannwolle.com/2018/09/'>September 2018</a></li>
+	<li><a href='https://leighannwolle.com/2018/02/'>February 2018</a></li>
+	<li><a href='https://leighannwolle.com/2017/11/'>November 2017</a></li>
+	<li><a href='https://leighannwolle.com/2017/10/'>October 2017</a></li>
+	<li><a href='https://leighannwolle.com/2017/01/'>January 2017</a></li>
+	<li><a href='https://leighannwolle.com/2016/07/'>July 2016</a></li>
+	<li><a href='https://leighannwolle.com/2016/04/'>April 2016</a></li>
+	<li><a href='https://leighannwolle.com/2016/02/'>February 2016</a></li>
+	<li><a href='https://leighannwolle.com/2016/01/'>January 2016</a></li>
+	<li><a href='https://leighannwolle.com/2015/12/'>December 2015</a></li>
+	<li><a href='https://leighannwolle.com/2014/06/'>June 2014</a></li>
+	<li><a href='https://leighannwolle.com/2014/05/'>May 2014</a></li>
+	<li><a href='https://leighannwolle.com/2014/01/'>January 2014</a></li>
+			</ul>
+
+			</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1>
+			<ul>
+					<li class="cat-item cat-item-24193"><a href="https://leighannwolle.com/category/missions/">Missions</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://leighannwolle.com/category/uncategorized/">Uncategorized</a>
+</li>
+			</ul>
+
+			</aside><aside id="meta-2" class="widget widget_meta"><h1 class="widget-title">Meta</h1>
+		<ul>
+			<li><a href="https://wordpress.com/start?ref=wplogin">Register</a></li>			<li><a href="https://leighannvictoria.wordpress.com/wp-login.php">Log in</a></li>
+			<li><a href="https://leighannwolle.com/feed/">Entries feed</a></li>
+			<li><a href="https://leighannwolle.com/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.com/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.com</a></li>
+		</ul>
+
+		</aside>				</div>
+
+		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main .site-main -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+						<a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Blog at WordPress.com.</a>
+
+        			</div><!-- .site-info -->
+			</footer><!-- #colophon .site-footer -->
+</div><!-- #page .hfeed .site -->
+
+		<script type="text/javascript">
+		//<![CDATA[
+		var infiniteScroll = JSON.parse( decodeURIComponent( '%7B%22settings%22%3A%7B%22id%22%3A%22content%22%2C%22ajaxurl%22%3A%22https%3A%5C%2F%5C%2Fleighannwolle.com%5C%2F%3Finfinity%3Dscrolling%22%2C%22type%22%3A%22click%22%2C%22wrapper%22%3Afalse%2C%22wrapper_class%22%3A%22infinite-wrap%22%2C%22footer%22%3A%22page%22%2C%22click_handle%22%3A%221%22%2C%22text%22%3A%22Older%20posts%22%2C%22totop%22%3A%22Scroll%20back%20to%20top%22%2C%22currentday%22%3A%2214.12.15%22%2C%22order%22%3A%22DESC%22%2C%22scripts%22%3A%5B%5D%2C%22styles%22%3A%5B%5D%2C%22google_analytics%22%3Afalse%2C%22offset%22%3A1%2C%22history%22%3A%7B%22host%22%3A%22leighannwolle.com%22%2C%22path%22%3A%22%5C%2Fpage%5C%2F%25d%5C%2F%22%2C%22use_trailing_slashes%22%3Atrue%2C%22parameters%22%3A%22%22%7D%2C%22query_args%22%3A%7B%22error%22%3A%22%22%2C%22m%22%3A%22%22%2C%22p%22%3A0%2C%22post_parent%22%3A%22%22%2C%22subpost%22%3A%22%22%2C%22subpost_id%22%3A%22%22%2C%22attachment%22%3A%22%22%2C%22attachment_id%22%3A0%2C%22name%22%3A%22%22%2C%22pagename%22%3A%22%22%2C%22page_id%22%3A0%2C%22second%22%3A%22%22%2C%22minute%22%3A%22%22%2C%22hour%22%3A%22%22%2C%22day%22%3A0%2C%22monthnum%22%3A0%2C%22year%22%3A0%2C%22w%22%3A0%2C%22category_name%22%3A%22%22%2C%22tag%22%3A%22%22%2C%22cat%22%3A%22%22%2C%22tag_id%22%3A%22%22%2C%22author%22%3A%22%22%2C%22author_name%22%3A%22%22%2C%22feed%22%3A%22%22%2C%22tb%22%3A%22%22%2C%22paged%22%3A0%2C%22meta_key%22%3A%22%22%2C%22meta_value%22%3A%22%22%2C%22preview%22%3A%22%22%2C%22s%22%3A%22%22%2C%22sentence%22%3A%22%22%2C%22title%22%3A%22%22%2C%22fields%22%3A%22%22%2C%22menu_order%22%3A%22%22%2C%22embed%22%3A%22%22%2C%22category__in%22%3A%5B%5D%2C%22category__not_in%22%3A%5B%5D%2C%22category__and%22%3A%5B%5D%2C%22post__in%22%3A%5B%5D%2C%22post__not_in%22%3A%5B%5D%2C%22post_name__in%22%3A%5B%5D%2C%22tag__in%22%3A%5B%5D%2C%22tag__not_in%22%3A%5B%5D%2C%22tag__and%22%3A%5B%5D%2C%22tag_slug__in%22%3A%5B%5D%2C%22tag_slug__and%22%3A%5B%5D%2C%22post_parent__in%22%3A%5B%5D%2C%22post_parent__not_in%22%3A%5B%5D%2C%22author__in%22%3A%5B%5D%2C%22author__not_in%22%3A%5B%5D%2C%22lazy_load_term_meta%22%3Afalse%2C%22posts_per_page%22%3A15%2C%22ignore_sticky_posts%22%3Afalse%2C%22suppress_filters%22%3Afalse%2C%22cache_results%22%3Afalse%2C%22update_post_term_cache%22%3Atrue%2C%22update_post_meta_cache%22%3Atrue%2C%22post_type%22%3A%22%22%2C%22nopaging%22%3Afalse%2C%22comments_per_page%22%3A%2250%22%2C%22no_found_rows%22%3Afalse%2C%22order%22%3A%22DESC%22%7D%2C%22query_before%22%3A%222021-07-06%2009%3A30%3A45%22%2C%22last_post_date%22%3A%222015-12-14%2020%3A40%3A13%22%2C%22body_class%22%3A%22infinite-scroll%22%2C%22loading_text%22%3A%22Loading%20new%20page%22%2C%22stats%22%3A%22blog%3D55204588%26v%3Dwpcom%26tz%3D-5%26user_id%3D0%26subd%3Dleighannvictoria%26x_pagetype%3Dinfinite-click%22%7D%7D' ) );
+		//]]>
+		</script>
+		<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202127y' id='grofiles-cards-js'></script>
+<script id='wpgroho-js-extra'>
+var WPGroHo = {"my_hash":""};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1610363240h'></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-cc92fe0b6174b18d16c80122a517358f">
+	</div>
+	</div>
+<script id='highlander-comments-js-extra'>
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/leighannvictoria.wordpress.com\/public.api\/connect\/?action=request&domain=leighannwolle.com","logoutURL":"https:\/\/leighannvictoria.wordpress.com\/wp-login.php?action=logout&_wpnonce=588116d696","homeURL":"https:\/\/leighannwolle.com\/","postID":"239","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s0.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1573483029j'></script>
+
+<script>
+window.addEventListener( "load", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20201002";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20201002";
+	script.defer = true;
+	document.body.appendChild( script );
+} );
+</script>
+
+
+		<div
+			class="jp-carousel-wrap jp-carousel-transitions"
+			itemscope
+			itemtype="https://schema.org/ImageGallery"
+			style="display: none;">
+			<div class="jp-carousel-overlay"></div>
+			<div class="jp-carousel"></div>
+			<div class="jp-carousel-fadeaway"></div>
+			<div class="jp-carousel-info">
+				<div class="jp-carousel-photo-info">
+					<h2 class="jp-carousel-caption" itemprop="caption description"></h2>
+				</div>
+				<div class="jp-carousel-info-columns">
+					<div class="jp-carousel-left-column-wrapper">
+						<div class="jp-carousel-titleanddesc"></div>
+						<!-- Intentional duplicate -->
+						<div class="jp-carousel-photo-info">
+							<h2 class="jp-carousel-caption" itemprop="caption description"></h2>
+						</div>
+													<div id="jp-carousel-comment-form-container">
+																											<form id="jp-carousel-comment-form">
+											<label for="jp-carousel-comment-form-comment-field" class="screen-reader-text">Write a Comment...</label>
+											<textarea
+												name="comment"
+												class="jp-carousel-comment-form-field jp-carousel-comment-form-textarea"
+												id="jp-carousel-comment-form-comment-field"
+												placeholder="Write a Comment..."
+											></textarea>
+											<div id="jp-carousel-comment-form-submit-and-info-wrapper">
+												<div id="jp-carousel-comment-form-commenting-as">
+																											<fieldset>
+															<label for="jp-carousel-comment-form-email-field">Email (Required)</label>
+															<input type="text" name="email" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-email-field" />
+														</fieldset>
+														<fieldset>
+															<label for="jp-carousel-comment-form-author-field">Name (Required)</label>
+															<input type="text" name="author" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-author-field" />
+														</fieldset>
+														<fieldset>
+															<label for="jp-carousel-comment-form-url-field">Website</label>
+															<input type="text" name="url" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-url-field" />
+														</fieldset>
+																									</div>
+												<input
+													type="submit"
+													name="submit"
+													class="jp-carousel-comment-form-button"
+													id="jp-carousel-comment-form-button-submit"
+													value="Post Comment" />
+												<span id="jp-carousel-comment-form-spinner">&nbsp;</span>
+												<div id="jp-carousel-comment-post-results"></div>
+											</div>
+										</form>
+																								</div>
+							<div class="jp-carousel-comments"></div>
+							<div id="jp-carousel-comments-loading">
+								<span>Loading Comments...</span>
+							</div>
+											</div>
+					<div class="jp-carousel-image-meta">
+						<div class="jp-carousel-buttons">
+														<a class="jp-carousel-commentlink" href="#">Comment</a>
+																				</div>
+						<ul class="jp-carousel-image-exif" style="display: none;"></ul>
+						<a class="jp-carousel-image-download" target="_blank" style="display: none;"></a>
+						<div class="jp-carousel-image-map" style="display: none;"></div>
+					</div>
+				</div>
+			</div>
+			<div class="jp-carousel-next-button" style="display: none;">
+				<span></span>
+			</div>
+			<div class="jp-carousel-previous-button" style="display: none;">
+				<span></span>
+			</div>
+			<div class="jp-carousel-close-hint"><span>&times;</span></div>
+		</div>
+
+		<link rel='stylesheet' id='all-css-0-3' href='https://s0.wp.com/_static/??/wp-content/mu-plugins/carousel/jetpack-carousel.css,/wp-content/mu-plugins/tiled-gallery/tiled-gallery.css?m=1624282247j&cssminify=yes' type='text/css' media='all' />
+<script id='jetpack-carousel-js-extra'>
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/leighannwolle.com\/wp-admin\/admin-ajax.php","nonce":"dff917d53f","display_exif":"1","display_comments":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/leighannvictoria.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fleighannwolle.com%2F2015%2F12%2F14%2Fi-am-not-just%2F","blog_id":"55204588","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"stats_query_args":"blog=55204588&v=wpcom&tz=-5&user_id=0&subd=leighannvictoria","is_public":"1"};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s0.wp.com/_static/??-eJyNjl2OwjAMhC9EsIACT6s9S5qY4pA/xQ5dbr8BqQgqVPHm8fibMYxZmRQFo4BjsHglg/lv7XgFL1aoKvs6UGSgeKJIcnsO81s5Y0CGXHvgXOM9VtIweFwI1TZQVL0uEDQLljYpKdpceIIoGl9ty21xTWLo0a4b9Mnn8ZR6h0bmjVPdlSwm0MwoD+Chc0HmhR+NLqkyenAoub2mpsUCI+TRqkF7j+X2rr5oUmM2Kcxk437Dz+aw7brusN8d3T8CsKi6'></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script type="text/javascript">
+			(function() {
+				var extend = function(out) {
+					out = out || {};
+
+					for (var i = 1; i < arguments.length; i++) {
+						if (!arguments[i])
+						continue;
+
+						for (var key in arguments[i]) {
+						if (arguments[i].hasOwnProperty(key))
+							out[key] = arguments[i][key];
+						}
+					}
+
+					return out;
+				};
+				extend( window.infiniteScroll.settings.scripts, ["postmessage","mobile-useragent-info","jquery-core","jquery-migrate","jquery","rlt-proxy","wpcom-actionbar-placeholder","grofiles-cards","wpgroho","jquery.autoresize","highlander-comments","devicepx","the-neverending-homepage","spun-toggle","wpcom-masterbar-tracks-js","wp-embed","swfobject","videopress","jetpack-carousel","tiled-gallery","carousel-wpcom"] );
+				extend( window.infiniteScroll.settings.styles, ["wpcom-smileys","the-neverending-homepage","style","wp-block-library","mediaelement","wp-mediaelement","jetpack-layout-grid","jetpack-ratings","coblocks-frontend","wpcom-core-compat-playlist-styles","wpcom-bbpress2-staff-css","spun-wpcom","geo-location-flair","reblogging","a8c-global-print","h4-global","spun-quicksand","spun-playfair","spun-nunito","jetpack-global-styles-frontend-style","highlander-comments","highlander-comments-ie7","jetpack-carousel","tiled-gallery"] );
+			})();
+		</script>
+				<span id="infinite-aria" aria-live="assertive"></span>
+		<script src="//stats.wp.com/w.js?61" defer></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'55204588','blog_tz':'-5','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'55204588','v':'wpcom','tz':'-5','user_id':'0','subd':'leighannvictoria'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1TaVhzUzFMbjdWNHpwZGhTayxPSUFCMGNrd29+Smw0TDhnZmRTK0hlRi9QSGh6bi9GXVhBJWIlZlR5U1JMLU8/MkNtblkvY1dDWl8lS09yQTdYZmxCd2xweX45Skw5QVVBR1pSUTgucXB+ZTR8bTNiLyZWTU18UF89bC9UdiVXVnVpNjMtP1RRJlhKUnRzbXF1RS8/d3hYWDJrUGpsTi5WOS1yMFd0TEh1aG5wMkt3cl1bYlFtYWRwd1FBeXlFaE1Ca35oeiZqYVRiPzYrMDBlZ18vXS0zVFYtR2c5TVNGLXBqaEElTnBDPUtBUUp0S1pWV0FnS3ZVOSs4LWtVZlRxdjNfTy9uYm5fNw=='}]);
+_stq.push([ 'clickTrackerInit', '55204588', '0' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+
+}
+</script>
+</body>
+</html>
